@@ -21,3 +21,23 @@ parallelAddressTotalScore <- function(input, target) {
     .Call('AddressR_parallelAddressTotalScore', PACKAGE = 'AddressR', input, target)
 }
 
+#' @title
+#' Address match v3
+#' @description
+#' Finds the best matches for an address using Levenshtein
+#'
+#' @param input the input dataframe for cleaning
+#'
+#' @param target the target dataframe for cleanning
+#'
+#' @details
+#' \code{session_count} takes a vector of intertime values (generated via \code{\link{intertimes}},
+#' or in any other way you see fit) and returns the total number of sessions within that dataset.
+#' It's implimented in C++, providing a (small) increase in speed over the R equivalent.
+#' @export
+NULL
+
+parallelAddressTotalScore3 <- function(input, target) {
+    .Call('AddressR_parallelAddressTotalScore3', PACKAGE = 'AddressR', input, target)
+}
+
